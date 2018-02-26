@@ -1,0 +1,12 @@
+<h1>My id - {{mypeerid}}</h1>
+<form #signupForm="ngForm">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Another Id" required id="inputAnotherId" name="anotherid" ngModel>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!signupForm.form.valid" (click)="connect(signupForm)">Connect</button>
+</form>
+
+
+
+<button mat-raised-button (click)="videoconnect()">VideoChat</button>
+<video #myvideo></video>
